@@ -21,7 +21,7 @@ const Cart = (props) => {
       <h2 align="center">All Carts</h2>
       {allCart?.map((cart) => {
         return (
-          <div className="cart-product">
+          <div key={cart.id} className="cart-product">
             <span className="cart-img">
               <img src={cart.image} alt="" />
             </span>
