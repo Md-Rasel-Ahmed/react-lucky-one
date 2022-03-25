@@ -17,8 +17,8 @@ const Cart = (props) => {
     name = cart.name;
   }
   return (
-    <div>
-      <h2>Cart</h2>
+    <div className="cart-wraper">
+      <h2 align="center">All Carts</h2>
       {allCart?.map((cart) => {
         return (
           <div className="cart-product">
@@ -26,14 +26,24 @@ const Cart = (props) => {
               <img src={cart.image} alt="" />
             </span>
             <span>{cart.name}</span>
-            <button>
+            <button style={{ backgroundColor: "red", color: "#fff" }}>
               <FontAwesomeIcon icon={faTrashRestore} />
             </button>
           </div>
         );
       })}
-      <button onClick={props.randomeChoseBtn}>Choose 1 for me</button>
-      <button onClick={props.deleteBtn}>Choose again</button>
+      <button
+        style={{ backgroundColor: "green" }}
+        onClick={props.randomeChoseBtn}
+      >
+        Choose 1 for me
+      </button>
+      <button
+        style={{ backgroundColor: "red", margin: "5px" }}
+        onClick={props.deleteBtn}
+      >
+        Choose again
+      </button>
     </div>
   );
 };

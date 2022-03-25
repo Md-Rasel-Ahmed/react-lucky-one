@@ -5,7 +5,7 @@ import Shop from "./components/Shop/Shop";
 function App() {
   return (
     <div>
-      <h1>All Product</h1>
+      <h1 align="center">Fin Dine Cafe</h1>
       <Shop></Shop>
     </div>
   );

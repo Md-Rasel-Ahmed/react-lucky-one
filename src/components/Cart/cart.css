@@ -10,3 +10,16 @@
   gap: 5px;
   margin-top: 5px;
 }
+.cart-wraper {
+  background-color: rgb(163, 161, 161);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .cart-wraper {
+    width: 300px;
+
+    margin: auto;
+  }
+}

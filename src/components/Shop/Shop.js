@@ -32,18 +32,19 @@ const Shop = () => {
   };
   //   randome selected products
   const randomeSelect = () => {
-    let emty = [];
-    let randome = Math.floor(Math.random() * cart.length);
-    // console.log(randome);
-    for (const cartId of cart) {
-      //   console.log(cartId.id);
-      if (parseInt(cartId.id) === randome) {
-        emty.push(cartId);
+    if (cart.length > 1) {
+      let emty = [];
+      let randome = Math.floor(Math.random() * cart.length);
+      for (const cartId of cart) {
+        if (parseInt(cartId.id) === randome) {
+          emty.push(cartId);
+        }
       }
+      console.log(randome);
+      console.log(emty);
+      setCarts(emty);
+      setProducts([...products]);
     }
-    console.log(emty);
-    setCarts(emty);
-    setProducts([...products]);
   };
   return (
     <div className="wraper">
@@ -58,7 +59,7 @@ const Shop = () => {
       </div>
       <Cart
         allCart={cart}
-        deleBtn={deleteCart}
+        deleteBtn={deleteCart}
         randomeChoseBtn={randomeSelect}
       ></Cart>
     </div>
