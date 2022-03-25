@@ -1,6 +1,5 @@
 .wraper {
   display: flex;
-  justify-content: space-around;
 }
 .card-wraper {
   width: 70%;

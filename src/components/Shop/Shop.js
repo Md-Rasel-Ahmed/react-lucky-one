@@ -12,6 +12,7 @@ const Shop = () => {
         setProducts(data);
       });
   }, []);
+  //   Added product button
   const addToCart = (product, id) => {
     let cartExitPd = cart.find((cartId) => cartId.id === id);
     if (cartExitPd) {
@@ -19,16 +20,14 @@ const Shop = () => {
       return false;
     }
     if (cart.length > 3) {
-      alert("Already fouth items added!");
+      alert("Sorry!! Already fouth items added!");
       return false;
     }
     setCarts([...cart, product]);
   };
-  //   delete items
-  const deleteCart = () => {
-    console.log("done");
+  //   Remove full item from the cart component
+  const removeFullCart = () => {
     setCarts([]);
-    setProducts([...products]);
   };
   //   randome selected products
   const randomeSelect = () => {
@@ -37,8 +36,13 @@ const Shop = () => {
       let randome = cart[Math.floor(Math.random() * cart.length)];
       alert(randome.name + " is much better for your health");
       emty.push(randome);
+      setCarts(emty);
     }
-    setCarts(emty);
+  };
+  //   remove single item from the cart
+  const removeSingleItem = (id) => {
+    let filterItem = cart.filter((cart) => cart.id !== id);
+    setCarts(filterItem);
   };
   return (
     <div className="wraper">
@@ -54,8 +58,9 @@ const Shop = () => {
       <Cart
         className="cart-component"
         allCart={cart}
-        deleteBtn={deleteCart}
+        chooseAgianBtn={removeFullCart}
         randomeChoseBtn={randomeSelect}
+        removeSingleItem={removeSingleItem}
       ></Cart>
     </div>
   );

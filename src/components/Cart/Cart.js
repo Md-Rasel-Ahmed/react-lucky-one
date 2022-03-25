@@ -9,7 +9,7 @@ import "./cart.css";
 
 const Cart = (props) => {
   //   console.log(props);
-  const { allCart } = props;
+  const { allCart, randomeChoseBtn, chooseAgianBtn, removeSingleItem } = props;
   let price;
   let name;
   for (const cart of allCart) {
@@ -26,21 +26,21 @@ const Cart = (props) => {
               <img src={cart.image} alt="" />
             </span>
             <span>{cart.name}</span>
-            <button style={{ backgroundColor: "red", color: "#fff" }}>
+            <button
+              onClick={() => removeSingleItem(cart.id)}
+              style={{ backgroundColor: "red", color: "#fff" }}
+            >
               <FontAwesomeIcon icon={faTrashRestore} />
             </button>
           </div>
         );
       })}
-      <button
-        style={{ backgroundColor: "green" }}
-        onClick={props.randomeChoseBtn}
-      >
+      <button style={{ backgroundColor: "green" }} onClick={randomeChoseBtn}>
         Choose 1 for me
       </button>
       <button
         style={{ backgroundColor: "red", margin: "5px" }}
-        onClick={props.deleteBtn}
+        onClick={chooseAgianBtn}
       >
         Choose again
       </button>
