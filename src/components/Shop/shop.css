@@ -7,9 +7,6 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
-.cart-component {
-  position: sticky !important;
-}
 @media only screen and (max-width: 600px) {
   .card-wraper {
     display: grid;

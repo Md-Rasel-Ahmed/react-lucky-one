@@ -1,0 +1,14 @@
+.react-concept {
+  width: 90%;
+  margin: 0 auto;
+}
+.react-concept h2 {
+  text-align: center;
+}
+.state-and-props,
+.useState {
+  border-bottom: 2px solid black;
+  padding: 10px;
+  margin-top: 5px;
+  text-align: justify;
+}

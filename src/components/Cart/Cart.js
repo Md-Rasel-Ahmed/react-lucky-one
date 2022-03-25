@@ -17,7 +17,7 @@ const Cart = (props) => {
     name = cart.name;
   }
   return (
-    <div className="cart-wraper">
+    <div className="cart">
       <h2 align="center">All Carts</h2>
       {allCart?.map((cart) => {
         return (

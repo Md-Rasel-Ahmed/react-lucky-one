@@ -44,6 +44,7 @@ const Shop = () => {
     let filterItem = cart.filter((cart) => cart.id !== id);
     setCarts(filterItem);
   };
+  console.log(typeof useState());
   return (
     <div className="wraper">
       <div className="card-wraper">

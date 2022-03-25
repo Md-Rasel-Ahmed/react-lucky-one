@@ -10,13 +10,16 @@
   gap: 5px;
   margin-top: 5px;
 }
-.cart-wraper {
+.cart {
   background-color: rgb(163, 161, 161);
   border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px;
   width: 25%;
   margin-left: 5px;
+  position: sticky !important;
+  height: 100%;
+  top: 0;
 }
 @media only screen and (max-width: 600px) {
   .cart-wraper {
