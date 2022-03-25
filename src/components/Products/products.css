@@ -1,0 +1,15 @@
+.card {
+  border: 2px solid rgb(141, 135, 135);
+  padding: 10px;
+  border-radius: 10px;
+}
+img {
+  width: 100%;
+}
+button {
+  background: mediumblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
