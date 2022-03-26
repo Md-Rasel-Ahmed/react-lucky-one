@@ -1,3 +1,3 @@
 # FINE DINE CAFE
 
-Project live link (https://github.com/facebook/create-react-app).
+Project live link (https://storied-dusk-2cf062.netlify.app/).
